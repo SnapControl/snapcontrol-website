@@ -488,24 +488,34 @@ export default function PestControlWebsite() {
           </div>
         </section>
 
-        <section className="bg-white px-6 py-10">
-          <div className="mx-auto max-w-7xl rounded-[2rem] bg-slate-950 p-10 text-white shadow-2xl">
-            <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
-              <div>
-                <p className="font-bold uppercase tracking-widest text-blue-400">Customer Reviews</p>
-                <h2 className="mt-3 text-4xl font-black leading-tight">Trusted by homeowners and businesses.</h2>
-              </div>
+       <section className="bg-white px-6 py-10">
+  <div className="mx-auto max-w-4xl rounded-[2rem] bg-slate-950 p-10 text-center text-white shadow-2xl">
+    <p className="font-bold uppercase tracking-widest text-blue-400">
+      Google Reviews
+    </p>
 
-              <div>
-                <div className="mb-4 text-3xl text-yellow-400">★★★★★</div>
-                <blockquote className="text-2xl font-bold leading-10 text-white">
-                  “Fantastic service from start to finish. The team arrived quickly, explained everything clearly, and completely solved our rodent issue. Highly recommend SnapControl.”
-                </blockquote>
-                <p className="mt-5 text-lg font-semibold text-blue-300">— Michael R., Commercial Property Owner</p>
-              </div>
-            </div>
-          </div>
-        </section>
+    <h2 className="mt-4 text-4xl font-black leading-tight">
+      See what our customers are saying.
+    </h2>
+
+    <div className="mt-6 text-5xl text-yellow-400">
+      ★★★★★
+    </div>
+
+    <p className="mt-6 text-lg leading-8 text-slate-300">
+      Read verified Google reviews from homeowners and businesses who have used SnapControl services.
+    </p>
+
+    <a
+      href="https://www.google.com/search?q=Snap+Control&stick=H4sIAAAAAAAA_-NgU1I1qLAwMzAxSExJTTZLNjCwNLK0MqhINE8xMjIwNDI0TzG3SDIyXMTKE5yXWKDgnJ9XUpSfAwBRZF1qOAAAAA&hl=en-GB&mat=CdJiHJRPpxgVElYBTVDHnpL1O0vKYrqZIPajuBwAAooFCdMqOT2YG0VaRHW6dpMEZ3OckikDOCHb9VnzNYk4ZoIrfHzChXaBdViUZ3ShG3AupwjihERlS0NMBf9X2Vx2Zw&authuser=0"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-8 inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-lg font-bold text-slate-950 shadow-lg hover:bg-slate-100"
+    >
+      ⭐ View Google Reviews
+    </a>
+  </div>
+</section>
 
         
       </main>
