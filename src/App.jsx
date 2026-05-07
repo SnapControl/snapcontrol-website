@@ -198,9 +198,17 @@ export default function PestControlWebsite() {
                   const pest = form.pest.value;
                   const issue = form.issue.value;
 
-                  const message = `New SnapControl enquiry%0A%0AName: ${name}%0APhone: ${phone}%0AEmail: ${email}%0APest: ${pest}%0AIssue: ${issue}`;
+                  const message = encodeURIComponent(
+                    `New SnapControl enquiry
 
-                  window.open(`https://wa.me/447399359299?text=${message}`, "_blank");
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Pest: ${pest}
+Issue: ${issue}`
+                  );
+
+                  window.location.href = `https://wa.me/447399359299?text=${message}`;
                 }}
               >
                 <input name="name" className="rounded-xl border border-slate-200 bg-white px-4 py-4 outline-none focus:border-blue-700" placeholder="Your name" required />
@@ -463,7 +471,7 @@ export default function PestControlWebsite() {
                   href="https://www.instagram.com/snapcontroluk/"
                   className="mt-8 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 px-8 py-4 text-lg font-bold text-white shadow-lg hover:opacity-90"
                 >
-                               View Our Instagram
+                  View Our Instagram
                 </a>
               </div>
 
