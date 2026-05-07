@@ -463,7 +463,7 @@ export default function PestControlWebsite() {
                   href="https://www.instagram.com/snapcontroluk/"
                   className="mt-8 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 px-8 py-4 text-lg font-bold text-white shadow-lg hover:opacity-90"
                 >
-                  View Our Instagram
+                               View Our Instagram
                 </a>
               </div>
 
@@ -488,19 +488,25 @@ export default function PestControlWebsite() {
           </div>
         </section>
 
-<div>
-  <div className="rounded-3xl bg-blue-900/40 p-8">
-    <div className="mb-4 text-3xl text-yellow-400">★★★★★</div>
+        <section className="bg-white px-6 py-10">
+          <div className="mx-auto max-w-7xl rounded-[2rem] bg-slate-950 p-10 text-white shadow-2xl">
+            <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
+              <div>
+                <p className="font-bold uppercase tracking-widest text-blue-400">Customer Reviews</p>
+                <h2 className="mt-3 text-4xl font-black leading-tight">Trusted by homeowners and businesses.</h2>
+              </div>
 
-    <blockquote className="text-2xl font-bold leading-10 text-white">
-      “Fantastic service from start to finish. The team arrived quickly, explained everything clearly, and completely solved our rodent issue. Highly recommend SnapControl.”
-    </blockquote>
+              <div>
+                <div className="mb-4 text-3xl text-yellow-400">★★★★★</div>
+                <blockquote className="text-2xl font-bold leading-10 text-white">
+                  “Fantastic service from start to finish. The team arrived quickly, explained everything clearly, and completely solved our rodent issue. Highly recommend SnapControl.”
+                </blockquote>
+                <p className="mt-5 text-lg font-semibold text-blue-300">— Michael R., Commercial Property Owner</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-    <p className="mt-5 text-lg font-semibold text-blue-300">
-      — Michael R., Commercial Property Owner
-    </p>
-  </div>
-</div>
         
       </main>
 
