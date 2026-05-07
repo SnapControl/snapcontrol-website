@@ -495,7 +495,7 @@ export default function PestControlWebsite() {
 <h2 className="mt-3 text-4xl font-black leading-tight">
   Trusted by homeowners and businesses.
 </h2>
-
+<div className="rounded-3xl bg-blue-900/40 p-8">
 <div className="mb-4 text-3xl text-yellow-400">★★★★★</div>
 
 <blockquote className="text-2xl font-bold leading-10 text-white">
@@ -504,8 +504,7 @@ export default function PestControlWebsite() {
 
 <p className="mt-5 text-lg font-semibold text-blue-300">
   — Michael R., Commercial Property Owner
-</p>
-        
+</div>        
       </main>
 
       <footer className="bg-slate-950 px-6 py-8 text-slate-300">
