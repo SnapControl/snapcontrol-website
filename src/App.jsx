@@ -64,7 +64,7 @@ export default function PestControlWebsite() {
   return (
     <div className="min-h-screen bg-white text-slate-950">
       <header className="sticky top-0 z-50 border-b border-slate-100 bg-white shadow-sm">
-        <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 px-4 py-4 sm:px-6">
+        <div className="relative mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 px-4 py-4 sm:px-6">
           <div className="flex items-center gap-3 min-w-0">
             <div className="relative flex h-16 w-16 items-center justify-center rounded-xl bg-white shadow-sm ring-2 ring-blue-700">
               <div className="absolute left-1 top-1 h-4 w-4 border-l-4 border-t-4 border-slate-950" />
@@ -93,15 +93,19 @@ export default function PestControlWebsite() {
           </nav>
 
           {mobileMenuOpen && (
-<div className="relative mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 px-4 py-4 sm:px-6">              <a href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a>
-              <a href="#about" onClick={() => setMobileMenuOpen(false)}>About Us</a>
-              <a href="#guides" onClick={() => setMobileMenuOpen(false)}>Pest Guides</a>
-              <a href="#gallery" onClick={() => setMobileMenuOpen(false)}>Gallery</a>
-              <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact Us</a>
+            <div className="absolute left-0 top-full z-50 w-full border-t border-slate-200 bg-white px-6 py-6 shadow-xl lg:hidden">
+              <div className="flex flex-col gap-5 text-center text-base font-semibold text-slate-900">
+                <a href="#home" onClick={() => setMobileMenuOpen(false)}>Home</a>
+                <a href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a>
+                <a href="#about" onClick={() => setMobileMenuOpen(false)}>About Us</a>
+                <a href="#guides" onClick={() => setMobileMenuOpen(false)}>Pest Guides</a>
+                <a href="#gallery" onClick={() => setMobileMenuOpen(false)}>Gallery</a>
+                <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact Us</a>
 
-              <div className="mt-4 flex flex-col gap-2 border-t border-slate-200 pt-4 text-sm">
-                <a href="mailto:Snapservicesuk@gmail.com">📧 Snapservicesuk@gmail.com</a>
-                <a href="tel:07399359299">📞 07399 359299</a>
+                <div className="mt-4 flex flex-col gap-3 border-t border-slate-200 pt-4 text-sm">
+                  <a href="mailto:Snapservicesuk@gmail.com">📧 Snapservicesuk@gmail.com</a>
+                  <a href="tel:07399359299">📞 07399 359299</a>
+                </div>
               </div>
             </div>
           )}
