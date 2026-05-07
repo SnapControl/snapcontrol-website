@@ -135,7 +135,7 @@ export default function PestControlWebsite() {
           🚨 24/7 Emergency Pest Control • Fast Response Times • Commercial & Residential Callouts
         </div>
         <section id="home" className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50 to-white">
-          <div className="absolute right-0 top-0 hidden h-full w-1/2 bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.12),transparent_55%)] lg:block" />
+          <div className="pointer-events-none absolute right-0 top-0 hidden h-full w-1/2 bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.12),transparent_55%)] lg:block" />
           <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 lg:grid-cols-[1fr_0.9fr] lg:py-20">
             <div className="relative z-10 lg:pt-10">
               <h1 className="max-w-2xl text-4xl font-black leading-tight tracking-tight sm:text-6xl lg:text-7xl">
