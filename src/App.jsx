@@ -507,13 +507,22 @@ export default function PestControlWebsite() {
     </p>
 
     <a
-href="https://www.google.com/search?q=SnapControl+snapcontrol.uk+reviews"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="mt-8 inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-lg font-bold text-slate-950 shadow-lg hover:bg-slate-100"
-    >
-      ⭐ View Google Reviews
-    </a>
+<section className="bg-white px-6 py-10">
+  <div className="mx-auto max-w-7xl rounded-[2rem] bg-slate-950 p-10 text-white shadow-2xl">
+    <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
+      <div>
+        <p className="font-bold uppercase tracking-widest text-blue-400">Customer Reviews</p>
+        <h2 className="mt-3 text-4xl font-black leading-tight">Trusted by homeowners and businesses.</h2>
+      </div>
+
+      <div>
+        <div className="mb-4 text-3xl text-yellow-400">★★★★★</div>
+        <blockquote className="text-2xl font-bold leading-10 text-white">
+          “Fantastic service from start to finish. The team arrived quickly, explained everything clearly, and completely solved our rodent issue. Highly recommend SnapControl.”
+        </blockquote>
+        <p className="mt-5 text-lg font-semibold text-blue-300">— Michael R., Commercial Property Owner</p>
+      </div>
+    </div>
   </div>
 </section>
 
