@@ -208,7 +208,7 @@ Pest: ${pest}
 Issue: ${issue}`
                   );
 
-window.location.href = `https://api.whatsapp.com/send?phone=447399359299&text=${message}`;
+                  window.location.href = `https://api.whatsapp.com/send?phone=447399359299&text=${message}`;
                 }}
               >
                 <input name="name" className="rounded-xl border border-slate-200 bg-white px-4 py-4 outline-none focus:border-blue-700" placeholder="Your name" required />
