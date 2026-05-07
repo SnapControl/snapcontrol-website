@@ -32,6 +32,7 @@ const trustItems = [
 
 export default function PestControlWebsite() {
   const [activeSection, setActiveSection] = useState("home");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const sectionIds = ["home", "services", "about", "guides", "gallery"];
@@ -78,6 +79,7 @@ export default function PestControlWebsite() {
               <div className="text-2xl font-black tracking-tight sm:text-3xl">
                 <span className="text-slate-950">Snap</span><span className="text-blue-700">Control</span>
               </div>
+              
             </div>
           </div>
 
@@ -90,6 +92,22 @@ export default function PestControlWebsite() {
             <a onClick={() => handleNavClick("home")} className={`${activeSection === "home" ? "border-b-2 border-blue-700 pb-1 text-blue-700" : "hover:text-blue-700"}`} href="#contact">Contact Us</a>
           </nav>
 
+          {mobileMenuOpen && (
+            <div className="col-span-3 mt-4 flex flex-col gap-4 border-t border-slate-200 pt-4 text-center text-base font-semibold text-slate-900 lg:hidden">
+              <a href="#home" onClick={() => setMobileMenuOpen(false)}>Home</a>
+              <a href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a>
+              <a href="#about" onClick={() => setMobileMenuOpen(false)}>About Us</a>
+              <a href="#guides" onClick={() => setMobileMenuOpen(false)}>Pest Guides</a>
+              <a href="#gallery" onClick={() => setMobileMenuOpen(false)}>Gallery</a>
+              <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact Us</a>
+
+              <div className="mt-4 flex flex-col gap-2 border-t border-slate-200 pt-4 text-sm">
+                <a href="mailto:Snapservicesuk@gmail.com">📧 Snapservicesuk@gmail.com</a>
+                <a href="tel:07399359299">📞 07399 359299</a>
+              </div>
+            </div>
+          )}
+
           <div className="hidden flex-col items-end text-sm font-semibold text-slate-800 lg:flex">
             <a href="mailto:Snapservicesuk@gmail.com" className="flex items-center gap-2 hover:text-blue-700">
               📧 Snapservicesuk@gmail.com
@@ -99,7 +117,14 @@ export default function PestControlWebsite() {
             </a>
           </div>
 
-          <div className="text-3xl lg:hidden">☰</div>
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-3xl lg:hidden"
+            aria-label="Open menu"
+            type="button"
+          >
+            ☰
+          </button>
         </div>
       </header>
 
@@ -269,10 +294,21 @@ export default function PestControlWebsite() {
                   </p>
 
                   <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-                    <div className="rounded-xl bg-white px-4 py-4 text-center font-semibold text-slate-900 shadow-sm">✓ Fully Insured</div>
-                    <div className="rounded-xl bg-white px-4 py-4 text-center font-semibold text-slate-900 shadow-sm">✓ DBS Checked</div>
-                    <div className="rounded-xl bg-white px-4 py-4 text-center font-semibold text-slate-900 shadow-sm">✓ BPCA Trained</div>
-                    <div className="rounded-xl bg-white px-4 py-4 text-center font-semibold text-slate-900 shadow-sm">✓ Licensed Technicians</div>
+                    <div className="rounded-xl bg-white px-4 py-4 text-center font-semibold text-slate-900 shadow-sm">
+                      ✓ Fully Insured
+                    </div>
+
+                    <div className="rounded-xl bg-white px-4 py-4 text-center font-semibold text-slate-900 shadow-sm">
+                      ✓ DBS Checked
+                    </div>
+
+                    <div className="rounded-xl bg-white px-4 py-4 text-center font-semibold text-slate-900 shadow-sm">
+                      ✓ BPCA Trained
+                    </div>
+
+                    <div className="rounded-xl bg-white px-4 py-4 text-center font-semibold text-slate-900 shadow-sm">
+                      ✓ Licensed Technicians
+                    </div>
                   </div>
                 </div>
                 <div className="rounded-2xl border border-blue-100 bg-blue-50 p-5">
@@ -290,15 +326,34 @@ export default function PestControlWebsite() {
             <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-slate-950 to-blue-800 p-10 text-white shadow-2xl">
               <div className="absolute right-0 top-0 h-52 w-52 rounded-full bg-blue-500/20 blur-3xl" />
               <div className="relative z-10">
-                <div className="mb-8 inline-flex h-20 w-20 items-center justify-center rounded-3xl bg-white text-5xl shadow-xl">🛡️</div>
+                <div className="mb-8 inline-flex h-20 w-20 items-center justify-center rounded-3xl bg-white text-5xl shadow-xl">
+                  🛡️
+                </div>
 
-                <h3 className="text-3xl font-black leading-tight">Reliable protection for homes and businesses.</h3>
+                <h3 className="text-3xl font-black leading-tight">
+                  Reliable protection for homes and businesses.
+                </h3>
 
                 <div className="mt-8 space-y-5 text-lg text-slate-100">
-                  <div className="flex items-center gap-4"><span className="text-2xl">✓</span><p>Qualified and experienced technicians</p></div>
-                  <div className="flex items-center gap-4"><span className="text-2xl">✓</span><p>Safe and effective treatment methods</p></div>
-                  <div className="flex items-center gap-4"><span className="text-2xl">✓</span><p>Commercial and residential pest solutions</p></div>
-                  <div className="flex items-center gap-4"><span className="text-2xl">✓</span><p>Routine inspections and prevention plans</p></div>
+                  <div className="flex items-center gap-4">
+                    <span className="text-2xl">✓</span>
+                    <p>Qualified and experienced technicians</p>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <span className="text-2xl">✓</span>
+                    <p>Safe and effective treatment methods</p>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <span className="text-2xl">✓</span>
+                    <p>Commercial and residential pest solutions</p>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <span className="text-2xl">✓</span>
+                    <p>Routine inspections and prevention plans</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -309,26 +364,84 @@ export default function PestControlWebsite() {
           <div className="mx-auto max-w-5xl">
             <div className="mb-12 text-center">
               <p className="font-bold uppercase tracking-widest text-blue-700">Pest Guides</p>
-              <h2 className="mt-4 text-5xl font-black text-slate-950">Learn how to spot and prevent common pests.</h2>
-              <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-700">Helpful advice and practical prevention tips for homes, businesses, and commercial properties.</p>
+              <h2 className="mt-4 text-5xl font-black text-slate-950">
+                Learn how to spot and prevent common pests.
+              </h2>
+              <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-700">
+                Helpful advice and practical prevention tips for homes, businesses, and commercial properties.
+              </p>
             </div>
 
             <div className="space-y-5">
-              {[
-                ["🐀 Rodent Guide", "Rats and mice are commonly attracted to food sources, warmth, and hidden shelter areas. Common signs include scratching noises, droppings, damaged packaging, and strong odours.", "To help prevent infestations, seal entry points, remove food waste promptly, and schedule regular inspections for your property."],
-                ["🪳 Cockroach Guide", "Cockroaches thrive in warm and damp environments such as kitchens, storage rooms, and commercial food areas. They can spread bacteria and contaminate surfaces.", "Keeping areas clean, reducing moisture, and professional treatments are the most effective ways to prevent cockroach infestations."],
-                ["🐜 Ant Prevention", "Ants are usually attracted to sweet foods, crumbs, and moisture around kitchens and gardens. Small colonies can quickly become larger infestations if left untreated.", "Wiping surfaces regularly, storing food correctly, and blocking entry points can help reduce ant activity around your property."],
-                ["🕊️ Bird Prevention", "Birds such as pigeons and gulls can create nesting problems, property damage, noise issues, and health risks for homes and businesses.", "Professional bird proofing solutions including spikes, netting, and deterrent systems can help protect roofs, signage, solar panels, and commercial buildings."],
-                ["🪰 Fly Prevention", "Flies are commonly attracted to food waste, drains, bins, and warm environments. They can quickly become a nuisance in homes, restaurants, kitchens, and commercial properties.", "Regular cleaning, proper waste management, fly screens, and professional treatments can help reduce fly activity and prevent infestations."]
-              ].map(([title, first, second]) => (
-                <details key={title} className="rounded-3xl border border-blue-100 bg-white p-8 shadow-sm">
-                  <summary className="cursor-pointer list-none text-2xl font-black text-slate-950">{title}</summary>
-                  <div className="mt-5 text-lg leading-8 text-slate-700">
-                    <p>{first}</p>
-                    <p className="mt-4">{second}</p>
-                  </div>
-                </details>
-              ))}
+              <details className="rounded-3xl border border-blue-100 bg-white p-8 shadow-sm">
+                <summary className="cursor-pointer list-none text-2xl font-black text-slate-950">
+                  🐀 Rodent Guide
+                </summary>
+                <div className="mt-5 text-lg leading-8 text-slate-700">
+                  <p>
+                    Rats and mice are commonly attracted to food sources, warmth, and hidden shelter areas. Common signs include scratching noises, droppings, damaged packaging, and strong odours.
+                  </p>
+                  <p className="mt-4">
+                    To help prevent infestations, seal entry points, remove food waste promptly, and schedule regular inspections for your property.
+                  </p>
+                </div>
+              </details>
+
+              <details className="rounded-3xl border border-blue-100 bg-white p-8 shadow-sm">
+                <summary className="cursor-pointer list-none text-2xl font-black text-slate-950">
+                  🪳 Cockroach Guide
+                </summary>
+                <div className="mt-5 text-lg leading-8 text-slate-700">
+                  <p>
+                    Cockroaches thrive in warm and damp environments such as kitchens, storage rooms, and commercial food areas. They can spread bacteria and contaminate surfaces.
+                  </p>
+                  <p className="mt-4">
+                    Keeping areas clean, reducing moisture, and professional treatments are the most effective ways to prevent cockroach infestations.
+                  </p>
+                </div>
+              </details>
+
+              <details className="rounded-3xl border border-blue-100 bg-white p-8 shadow-sm">
+                <summary className="cursor-pointer list-none text-2xl font-black text-slate-950">
+                  🐜 Ant Prevention
+                </summary>
+                <div className="mt-5 text-lg leading-8 text-slate-700">
+                  <p>
+                    Ants are usually attracted to sweet foods, crumbs, and moisture around kitchens and gardens. Small colonies can quickly become larger infestations if left untreated.
+                  </p>
+                  <p className="mt-4">
+                    Wiping surfaces regularly, storing food correctly, and blocking entry points can help reduce ant activity around your property.
+                  </p>
+                </div>
+              </details>
+
+              <details className="rounded-3xl border border-blue-100 bg-white p-8 shadow-sm">
+                <summary className="cursor-pointer list-none text-2xl font-black text-slate-950">
+                  🕊️ Bird Prevention
+                </summary>
+                <div className="mt-5 text-lg leading-8 text-slate-700">
+                  <p>
+                    Birds such as pigeons and gulls can create nesting problems, property damage, noise issues, and health risks for homes and businesses.
+                  </p>
+                  <p className="mt-4">
+                    Professional bird proofing solutions including spikes, netting, and deterrent systems can help protect roofs, signage, solar panels, and commercial buildings.
+                  </p>
+                </div>
+              </details>
+
+              <details className="rounded-3xl border border-blue-100 bg-white p-8 shadow-sm">
+                <summary className="cursor-pointer list-none text-2xl font-black text-slate-950">
+                  🪰 Fly Prevention
+                </summary>
+                <div className="mt-5 text-lg leading-8 text-slate-700">
+                  <p>
+                    Flies are commonly attracted to food waste, drains, bins, and warm environments. They can quickly become a nuisance in homes, restaurants, kitchens, and commercial properties.
+                  </p>
+                  <p className="mt-4">
+                    Regular cleaning, proper waste management, fly screens, and professional treatments can help reduce fly activity and prevent infestations.
+                  </p>
+                </div>
+              </details>
             </div>
           </div>
         </section>
@@ -338,17 +451,35 @@ export default function PestControlWebsite() {
             <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <div>
                 <p className="font-bold uppercase tracking-widest text-blue-700">Gallery</p>
-                <h2 className="mt-4 text-5xl font-black leading-tight text-slate-950">Follow our latest work on Instagram.</h2>
-                <p className="mt-5 text-lg leading-8 text-slate-700">View recent pest prevention work, treatment updates, behind-the-scenes photos, and helpful tips from the SnapControl team.</p>
-                <a href="https://www.instagram.com/snapcontroluk/" className="mt-8 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 px-8 py-4 text-lg font-bold text-white shadow-lg hover:opacity-90">View Our Instagram</a>
+                <h2 className="mt-4 text-5xl font-black leading-tight text-slate-950">
+                  Follow our latest work on Instagram.
+                </h2>
+                <p className="mt-5 text-lg leading-8 text-slate-700">
+                  View recent pest prevention work, treatment updates, behind-the-scenes photos, and helpful tips from the SnapControl team.
+                </p>
+                <a
+                  href="https://www.instagram.com/snapcontroluk/"
+                  className="mt-8 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 px-8 py-4 text-lg font-bold text-white shadow-lg hover:opacity-90"
+                >
+                  View Our Instagram
+                </a>
               </div>
 
               <div className="rounded-3xl bg-blue-50 p-8 shadow-sm ring-1 ring-blue-100">
                 <div className="flex min-h-72 flex-col items-center justify-center rounded-2xl bg-white p-8 text-center">
                   <div className="mb-5 text-6xl">📸</div>
                   <h3 className="text-3xl font-black text-slate-950">Recent Posts</h3>
-                  <p className="mt-4 max-w-md text-lg leading-8 text-red-600 font-semibold">Warning: Instagram posts may contain images of deceased animals and pest control treatments.</p>
-                  <a href="https://www.instagram.com/snapcontroluk/" className="mt-6 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 px-6 py-3 font-bold text-white shadow-lg hover:opacity-90">Open Recent Posts</a>
+                  <p className="mt-4 max-w-md text-lg leading-8 text-red-600 font-semibold">
+                    Warning: Instagram posts may contain images of deceased animals and pest control treatments.
+                  </p>
+                  
+
+                  <a
+                    href="https://www.instagram.com/snapcontroluk/"
+                    className="mt-6 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 px-6 py-3 font-bold text-white shadow-lg hover:opacity-90"
+                  >
+                    Open Recent Posts
+                  </a>
                 </div>
               </div>
             </div>
@@ -365,12 +496,16 @@ export default function PestControlWebsite() {
 
               <div>
                 <div className="mb-4 text-3xl text-yellow-400">★★★★★</div>
-                <blockquote className="text-2xl font-bold leading-10 text-white">“Fantastic service from start to finish. The team arrived quickly, explained everything clearly, and completely solved our rodent issue. Highly recommend SnapControl.”</blockquote>
+                <blockquote className="text-2xl font-bold leading-10 text-white">
+                  “Fantastic service from start to finish. The team arrived quickly, explained everything clearly, and completely solved our rodent issue. Highly recommend SnapControl.”
+                </blockquote>
                 <p className="mt-5 text-lg font-semibold text-blue-300">— Michael R., Commercial Property Owner</p>
               </div>
             </div>
           </div>
         </section>
+
+        
       </main>
 
       <footer className="bg-slate-950 px-6 py-8 text-slate-300">
