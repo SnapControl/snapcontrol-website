@@ -93,9 +93,7 @@ export default function PestControlWebsite() {
           </nav>
 
           {mobileMenuOpen && (
-            <div className="col-span-3 mt-4 flex flex-col gap-4 border-t border-slate-200 pt-4 text-center text-base font-semibold text-slate-900 lg:hidden">
-              <a href="#home" onClick={() => setMobileMenuOpen(false)}>Home</a>
-              <a href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a>
+<div className="relative mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 px-4 py-4 sm:px-6">              <a href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a>
               <a href="#about" onClick={() => setMobileMenuOpen(false)}>About Us</a>
               <a href="#guides" onClick={() => setMobileMenuOpen(false)}>Pest Guides</a>
               <a href="#gallery" onClick={() => setMobileMenuOpen(false)}>Gallery</a>
