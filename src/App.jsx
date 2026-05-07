@@ -507,7 +507,7 @@ export default function PestControlWebsite() {
     </p>
 
     <a
-href="https://www.google.com/search?q=Snap+Control+reviews"
+href="https://www.google.com/search?q=SnapControl+snapcontrol.uk+reviews"
       target="_blank"
       rel="noopener noreferrer"
       className="mt-8 inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-lg font-bold text-slate-950 shadow-lg hover:bg-slate-100"
