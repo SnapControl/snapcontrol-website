@@ -507,7 +507,7 @@ export default function PestControlWebsite() {
     </p>
 
     <a
-      href="https://www.google.com/search?q=Snap+Control&stick=H4sIAAAAAAAA_-NgU1I1qLAwMzAxSExJTTZLNjCwNLK0MqhINE8xMjIwNDI0TzG3SDIyXMTKE5yXWKDgnJ9XUpSfAwBRZF1qOAAAAA&hl=en-GB&mat=CdJiHJRPpxgVElYBTVDHnpL1O0vKYrqZIPajuBwAAooFCdMqOT2YG0VaRHW6dpMEZ3OckikDOCHb9VnzNYk4ZoIrfHzChXaBdViUZ3ShG3AupwjihERlS0NMBf9X2Vx2Zw&authuser=0"
+href="https://www.google.com/search?q=Snap+Control+reviews"
       target="_blank"
       rel="noopener noreferrer"
       className="mt-8 inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-lg font-bold text-slate-950 shadow-lg hover:bg-slate-100"
