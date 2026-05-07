@@ -488,23 +488,20 @@ export default function PestControlWebsite() {
           </div>
         </section>
 
- <p className="font-bold uppercase tracking-widest text-blue-400">
-  Customer Reviews
-</p>
+<div>
+  <div className="rounded-3xl bg-blue-900/40 p-8">
+    <div className="mb-4 text-3xl text-yellow-400">★★★★★</div>
 
-<h2 className="mt-3 text-4xl font-black leading-tight">
-  Trusted by homeowners and businesses.
-</h2>
-<div className="rounded-3xl bg-blue-900/40 p-8">
-<div className="mb-4 text-3xl text-yellow-400">★★★★★</div>
+    <blockquote className="text-2xl font-bold leading-10 text-white">
+      “Fantastic service from start to finish. The team arrived quickly, explained everything clearly, and completely solved our rodent issue. Highly recommend SnapControl.”
+    </blockquote>
 
-<blockquote className="text-2xl font-bold leading-10 text-white">
-  “Fantastic service from start to finish. The team arrived quickly, explained everything clearly, and completely solved our rodent issue. Highly recommend SnapControl.”
-</blockquote>
-
-<p className="mt-5 text-lg font-semibold text-blue-300">
-  — Michael R., Commercial Property Owner
-</div>        
+    <p className="mt-5 text-lg font-semibold text-blue-300">
+      — Michael R., Commercial Property Owner
+    </p>
+  </div>
+</div>
+        
       </main>
 
       <footer className="bg-slate-950 px-6 py-8 text-slate-300">
