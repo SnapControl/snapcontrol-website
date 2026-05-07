@@ -502,11 +502,6 @@ export default function PestControlWebsite() {
       ★★★★★
     </div>
 
-    <p className="mt-6 text-lg leading-8 text-slate-300">
-      Read verified Google reviews from homeowners and businesses who have used SnapControl services.
-    </p>
-
-    <a
 <section className="bg-white px-6 py-10">
   <div className="mx-auto max-w-7xl rounded-[2rem] bg-slate-950 p-10 text-white shadow-2xl">
     <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
